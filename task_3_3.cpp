@@ -5,27 +5,45 @@
 #include <vector>
 using namespace std;
 
+void enterWords(string &longWord, string &shortWord);
+void printWord(string s, string word);
+
 int main()
 {
-   cout << "Enter some words: ";
-   vector<string> words;
-   string s;
-   while(cin >> s)
-      words.push_back(s);
-   string longWord = words[0];
-   string shortWord = words[0];   
-   for (int i = 1; i < words.size(); i++)
-   {      
-      if(longWord.length() < words[i].length())
-      {
-         longWord = words[i];
-      }
-      else if(shortWord.length() > words[i].length())
-      {
-         shortWord = words[i];
-      }
-   }   
-   cout << "the longest word: " << longWord << endl;
-   cout << "the shortest word: " << shortWord << endl;
+   string longWord, shortWord;
+   enterWords(longWord, shortWord);
+   printWord("the longest word: ", longWord);
+   printWord("the shortest word: ", shortWord);   
    return 0;
+}
+
+void enterWords(string &longWord, string &shortWord)
+{
+   cout << "Enter some words: ";   
+   string newWord;
+   while(cin >> newWord)
+   {  
+      if(longWord.length() == 0)
+      {
+         longWord = newWord;
+      }         
+      if(shortWord.length() == 0)   
+      {
+         shortWord = newWord;
+      }
+         
+      if(longWord.length() < newWord.length())
+      {
+         longWord = newWord;
+      }
+      else if(shortWord.length() > newWord.length())
+      {
+         shortWord = newWord;
+      }
+   }     
+}
+
+void printWord(string s, string word)
+{
+   cout << s << word << endl;
 }
