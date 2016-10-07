@@ -2,7 +2,6 @@
 
 #include <iostream>
 #include <string>
-#include <vector>
 using namespace std;
 
 void enterWords(string &longWord, string &shortWord);
@@ -21,17 +20,10 @@ void enterWords(string &longWord, string &shortWord)
 {
    cout << "Enter some words: ";   
    string newWord;
+   cin >> newWord;
+   longWord = shortWord =newWord;
    while(cin >> newWord)
    {  
-      if(longWord.length() == 0)
-      {
-         longWord = newWord;
-      }         
-      if(shortWord.length() == 0)   
-      {
-         shortWord = newWord;
-      }
-         
       if(longWord.length() < newWord.length())
       {
          longWord = newWord;
