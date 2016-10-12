@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <map>
 using namespace std;
 
 void withVector(vector<string> words);
@@ -16,7 +17,8 @@ int main()
    string s;
    while(cin >> s)
       words.push_back(s);
-   withVector(words);    
+   withVector(words);   
+   withMap(words);    
    return 0;
 }
 
@@ -42,11 +44,20 @@ void withVector(vector<string> words)
 
    for (int i = 0; i < uniqWords.size(); i++)
    {
-      cout << uniqWords[i] << " " << count[i] << endl;      
+      cout << uniqWords[i] << ": " << count[i] << endl;      
    }   
 }
 
 void withMap(vector<string> words)
 {
-   
+   map<string,int> uniqWords;
+   map<string, int>::const_iterator it;
+   for (int i = 0; i < words.size(); i++)
+    {
+      uniqWords[words[i]]++;
+    }		
+	 for (it = uniqWords.begin(); it != uniqWords.end(); it++)
+	 {
+		 cout<<(*it).first<< ": " <<(*it).second<<endl;
+	 }
 }
