@@ -5,8 +5,7 @@
 #include <stdexcept>
 #include <algorithm>
 
-using namespace std;
 
-double median(vector<double> vec);
+double median(std::vector<double> vec);
 
 #endif

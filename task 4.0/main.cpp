@@ -11,7 +11,17 @@
 #include "student_info.hpp"
 #include "grade.hpp"
 
-using namespace std;
+using std::vector;
+using std::string;
+using std::cout;
+using std::setprecision;
+using std::sort;
+using std::max;
+using std::endl;
+using std::streamsize;
+using std::cin;
+using std::domain_error;
+
 
 void print_info(const vector<Student_info> students, const string::size_type & maxlen)
 {

@@ -1,5 +1,8 @@
 #include "median.hpp"
 
+using std::vector;
+using std::domain_error;
+
 double median(vector<double> vec)
 {
    typedef vector<double>::size_type vec_size;

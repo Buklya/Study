@@ -5,19 +5,17 @@
 #include <string>
 #include <vector>
 
-using namespace std;
-
 struct Student_info
 {
-   string name;
+   std::string name;
    double middleterm, finalterm;
-   vector<double> homeworkMarks;
+   std::vector<double> homeworkMarks;
 };
 
 bool compare(const Student_info & x, const Student_info & y);
 
-istream& read_hw(istream& is, vector<double>& hw);
+std::istream& read_hw(std::istream& is, std::vector<double>& hw);
 
-istream& read (istream & is, Student_info & s);
+std::istream& read (std::istream & is, Student_info & s);
 
 #endif

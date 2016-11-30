@@ -1,5 +1,11 @@
 #include "student_info.hpp"
 
+using std::istream;
+using std::vector;
+using std::cin;
+using std::cout;
+using std::endl;
+
 bool compare(const Student_info & x, const Student_info & y)
 {
    return x.name < y.name;
