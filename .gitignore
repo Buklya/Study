@@ -31,4 +31,16 @@
 # Directory
 *.vscode
 
-stepic/stepic/
+stepic/stepic/Debug
+stepic/stepic/ipch
+*.db
+*.opendb
+*.sln
+stepic/stepic/stepic/Debug
+*.vcxproj
+*.filters
+targetver.h
+stdafx.cpp
+stdafx.h
+*.vs
+ReadMe.txt
